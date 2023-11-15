@@ -16,8 +16,6 @@
 				<div class="card-header mb-3 bg-primary text-white">Tambah Kategori</div>
 				<div class="card-body">
 					<div class="row">
-
-
 						<div class="col-md-12">
 							<div class="mb-3">
 								<label for="id" class="form-label">ID (Auto Increment)</label>
