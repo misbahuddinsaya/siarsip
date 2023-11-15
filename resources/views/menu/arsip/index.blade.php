@@ -1,11 +1,12 @@
 @extends('layouts.main', ['title' => 'Arsip', 'page_heading' => 'Arsip Surat'])
 
+
 @section('contents')
 <section class="row">
-    @include('utilities.alert-flash-message')
     <label class="form-label"> Berikut ini adalah surat-surat yang telah terbit dan diarsipkan.</label>
     <label class="form-label"> Klik "Lihat" pada kolom aksi untuk menampilkan surat.</label>
     <label class="form-label"> </label><br>
+    @include('utilities.alert-flash-message')
     <div class="col px-3 py-3 mb-1">
         <div class="card border-0 shadow-sm h-200">
             <div class="card-header mb-3 bg-primary text-white">Data Arsip Surat</div>

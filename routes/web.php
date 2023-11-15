@@ -21,19 +21,18 @@ use App\Http\Controllers\ArsipKelolaController;
 
 require __DIR__ . '/auth.php';
 
-Route::redirect('/', 'login');
-
-Route::middleware('auth')->group(function () {
-    Route::get('about', AboutController::class)->name('about');
-    Route::resource('kategori', KategoriKelolaController::class);
-    Route::resource('arsip', ArsipKelolaController::class);
-    Route::get('arsip/show/{id}', [ArsipKelolaController::class, 'show'])->name('arsip.show');
-    Route::get('arsip/download/{id}', [ArsipKelolaController::class, 'download'])->name('arsip.download');
-    Route::get('arsip/create', [ArsipKelolaController::class, 'create'])->name('arsip.create');
-    Route::get('kategori/create', [KategoriKelolaController::class, 'create'])->name('kategori.create');
-    Route::get('kategori/edit/{id}', [KategoriKelolaController::class, 'edit'])->name('kategori.edit');
-
-    Route::get('arsip/edit/{id}', [ArsipKelolaController::class, 'edit'])->name('arsip.edit');
-    Route::put('arsip/update/{id}', [ArsipKelolaController::class, 'update'])->name('arsip.update');
-    Route::patch('arsip/update/{id}', [ArsipKelolaController::class, 'update'])->name('arsip.update');
+Route::get('/', function () {
+    return view('home');
 });
+Route::get('about', AboutController::class)->name('about');
+Route::resource('kategori', KategoriKelolaController::class);
+Route::resource('arsip', ArsipKelolaController::class);
+Route::get('arsip/show/{id}', [ArsipKelolaController::class, 'show'])->name('arsip.show');
+Route::get('arsip/download/{id}', [ArsipKelolaController::class, 'download'])->name('arsip.download');
+Route::get('arsip/create', [ArsipKelolaController::class, 'create'])->name('arsip.create');
+Route::get('kategori/create', [KategoriKelolaController::class, 'create'])->name('kategori.create');
+Route::get('kategori/edit/{id}', [KategoriKelolaController::class, 'edit'])->name('kategori.edit');
+
+Route::get('arsip/edit/{id}', [ArsipKelolaController::class, 'edit'])->name('arsip.edit');
+Route::put('arsip/update/{id}', [ArsipKelolaController::class, 'update'])->name('arsip.update');
+Route::patch('arsip/update/{id}', [ArsipKelolaController::class, 'update'])->name('arsip.update');
