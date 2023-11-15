@@ -29,9 +29,9 @@
 </head>
 <main class="bg-light">
     <div class="nav-tabs">
-        <nav class="fixed-navbar px-5 py-3 rounded shadow-sm" style="background-color: #17252a;">
+        <nav class="relative-navbar px-5 py-3 shadow-sm" style="background-color: #17252a; position: fixed; width: 100%; z-index: 100;">
             <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
-            <h5 class="responsive-font font-weight-normal mb-0 me-auto">LSP POLINEMA</h5>
+            <h5 class="responsive-font font-weight-normal mb-0 text-white" style="text-align: right;">ARSIP SURAT <i class="bi bi-archive-fill ms-2"></i></h5>
         </nav>
     </div>
 </main>

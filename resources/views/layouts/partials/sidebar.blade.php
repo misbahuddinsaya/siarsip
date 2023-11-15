@@ -9,24 +9,23 @@
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
-                <li class="sidebar-title">Menu</li>
                 <li class="sidebar-item {{ request()->routeIs('arsip.*') ? 'active' : '' }}">
                     <a href="{{ route('arsip.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-text-fill"></i>
                         <span>Arsip</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->routeIs('kategori.*') ? 'active' : '' }}">
                     <a href="{{ route('kategori.index') }}" class='sidebar-link'>
-                        <i class="bi bi-file-ruled-fill"></i>
+                        <i class="bi bi-bookmark-fill"></i>
                         <span>Kategori Surat</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->is('about*') ? 'active' : '' }}">
                     <a href="{{ route('about') }}" class='sidebar-link'>
-                        <i class="bi bi-person-vcard-fill"></i>
+                        <i class="bi bi-person-fill"></i>
                         <span>About</span>
                     </a>
                 </li>
